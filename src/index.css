@@ -1,0 +1,17 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+:root { color-scheme: light; }
+.dark { color-scheme: dark; }
+html { -webkit-font-smoothing: antialiased; }
+body { @apply bg-[#f4f6f5] text-slate-800 dark:bg-[#0b1210] dark:text-slate-100; font-feature-settings: 'tnum' 1, 'cv11' 1; }
+::selection { background: #bfe8d4; }
+@layer components {
+  .card { @apply rounded-xl border border-slate-200/80 bg-white p-4 shadow-[0_1px_2px_rgba(16,24,20,.04)] dark:border-white/10 dark:bg-[#121c18]; }
+  .inp { @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/15 disabled:bg-slate-100 dark:border-white/15 dark:bg-[#0e1714] dark:text-slate-100; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-500/30 active:scale-[.98] disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-ghost { @apply inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-3.5 py-2 text-sm font-medium text-slate-700 shadow-sm transition hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-slate-300/40 active:scale-[.98] dark:border-white/15 dark:bg-transparent dark:text-slate-200 dark:hover:bg-white/5; }
+  .btn-danger { @apply inline-flex items-center rounded-md px-2 py-1 text-xs font-medium text-red-600 transition hover:bg-red-50 dark:hover:bg-red-950/40; }
+  .th { @apply bg-slate-50 px-4 py-2.5 text-left text-xs font-semibold tracking-wide text-slate-500 dark:bg-white/5 dark:text-slate-400; }
+  .td { @apply px-4 py-3 text-sm; }
+}
+@media print { body { background: #fff; } aside, .print\:hidden { display: none !important; } .card { box-shadow: none; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
