@@ -62,3 +62,4 @@ CLI alternative: `git init && git add . && git commit -m "Initial commit" && git
 
 ## Add member directly (no sign-up needed)
 Employees → "Add member directly". One-time setup: Supabase dashboard → **Edge Functions → Deploy a new function → Via Editor**, name it `add-member`, paste `supabase/functions/add-member/index.ts`, Deploy. The same steps work for `invite-user` (email invites; also set the `SITE_URL` secret).
+Restaurant Menu Application - Initial Deployment
